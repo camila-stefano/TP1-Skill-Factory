@@ -51,10 +51,10 @@ body {
 
 h1 {
   font-family: "Get Schwifty", "Changa", sans-serif;
-  font-size: 5em;
+  font-size: 6rem;
   width: fit-content;
   position: fixed;
-  margin: 5% 0 0 5%;
+  margin: 8% 0 0 4%;
   color: rgb(87, 255, 177);
   text-shadow: 1px 1px 100px #00cf79;
   animation: text-pulse 2s infinite;
@@ -63,7 +63,30 @@ h1 {
 .divider {
   width: 5%;
   height: 1px;
-  background-color: rgb(194, 246, 197);
+  background-color: rgb(183, 255, 215);
+}
+
+.go-home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  /* border: 1px solid red; */
+}
+
+.go-home-container .divider {
+  width: 41vw;
+  box-shadow: 1px 1px 15px rgb(113, 255, 208);
+}
+
+.go-home {
+  text-decoration: none;
+  color: rgb(147, 255, 205);
+  text-align: center;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin-right: 0.5rem;
 }
 
 .card {
@@ -88,10 +111,11 @@ h1 {
   top: 0;
   transform: scale(1.15);
   background-color: rgb(128, 76, 158);
+  background-color: rgb(128, 255, 128);
   color: rgb(96, 255, 162);
   /* transition: all 0.5s; */
   border: 2px solid rgb(113, 255, 208);
-  transform: translateX(-25%) translateY(-15%) scale(1.3);
+  transform: translateX(-20%) translateY(-12%) scale(1.2);
   transition: 0.5s;
 }
 
@@ -220,7 +244,7 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 5rem 0;
+  padding: 2rem 0;
   justify-content: center;
   gap: 1.2rem;
   /* border: 1px solid white; */
