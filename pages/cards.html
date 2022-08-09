@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/cards.css" />
+    <title>TP 1 - Skill Factory</title>
+  </head>
+  <body>
+    <img src="../images/rick.jpg" alt="" id="bg-img" />
+    <div class="main-container">
+      <!-- <div class="streak"></div> -->
+      <div class="leftSide">
+        <div id="titulo">
+          <h1>Rick and Morty</h1>
+        </div>
+        <div class="menu">
+          <img class="hangingRick" src="../images/rick-hanging-png.png" />
+          <label for="cards-amount">Select amount of characters to show</label>
+          <select name="cards-amount" id="cards-amount">
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+          </select>
+          <div class="search">
+            <label for="search-field">Search character</label>
+            <input type="text" id="search-field" />
+          </div>
+          <button id="showBtn">Show characters</button>
+          <button id="clearBtn">Clear page</button>
+        </div>
+      </div>
+
+      <div class="rightSide">
+        <div class="cards-header">
+          <!-- <img src="./images/open-eyes.png" alt="" class="src" /> -->
+        </div>
+        <section class="cardContainer"></section>
+        <button class="scrollUpBtn">Go up</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

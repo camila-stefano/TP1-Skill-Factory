@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500&display=swap");
+
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("../fonts/get_schwifty.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#muteBtn {
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background: none;
+  color: rgb(12, 255, 154);
+  border-color: #00cf79;
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Changa", sans-serif;
+  overflow-x: hidden;
+}
+
+#bg-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  z-index: -3;
+  position: fixed;
+}
+
+h1 {
+  font-family: "Get Schwifty", "Changa", sans-serif;
+  font-size: 5em;
+  width: fit-content;
+  position: fixed;
+  margin: 5% 0 0 5%;
+  color: rgb(87, 255, 177);
+  text-shadow: 1px 1px 100px #00cf79;
+  animation: text-pulse 2s infinite;
+}
+
+.divider {
+  width: 5%;
+  height: 1px;
+  background-color: rgb(194, 246, 197);
+}
+
+.card {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: linear-gradient(rgb(164, 115, 255), rgba(44, 83, 88, 0.5));
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: rgb(128, 255, 128);
+  font-size: 1.1rem;
+  transition: 0.4s;
+  cursor: pointer;
+  animation: pulse 3s infinite;
+}
+
+.card:hover {
+  top: 0;
+  transform: scale(1.15);
+  background-color: rgb(128, 76, 158);
+  color: rgb(96, 255, 162);
+  /* transition: all 0.5s; */
+  border: 2px solid rgb(113, 255, 208);
+  transform: translateX(-25%) translateY(-15%) scale(1.3);
+  transition: 0.5s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0.5em;
+  border-bottom: 2px solid rgb(0, 255, 136);
+}
+
+.card p {
+  text-shadow: 1px 2px 2px rgb(64, 39, 71);
+  cursor: text;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 1px 1px 3px rgba(2, 255, 150, 1);
+  }
+  25% {
+    box-shadow: 1px 1px 4px rgba(2, 255, 150, 0.2);
+  }
+  50% {
+    box-shadow: 1px 1px 5px rgba(2, 255, 150, 1);
+  }
+  75% {
+    box-shadow: 1px 1px 4px rgba(2, 255, 150, 0.2);
+  }
+  100% {
+    box-shadow: 1px 1px 3px rgba(2, 255, 150, 1);
+  }
+}
+
+@keyframes text-pulse {
+  0% {
+    text-shadow: 1px 1px 35px rgba(12, 255, 154, 0.3);
+  }
+  25% {
+    text-shadow: 1px 1px 35px rgba(12, 255, 154, 0.6);
+  }
+  50% {
+    text-shadow: 1px 1px 35px rgba(0, 255, 149, 1);
+  }
+  75% {
+    text-shadow: 1px 1px 35px rgba(12, 255, 154, 0.6);
+  }
+  100% {
+    text-shadow: 1px 1px 35px rgba(12, 255, 154, 0.3);
+  }
+}
+
+.menu {
+  font-size: 1.3rem;
+  text-align: center;
+  display: flex;
+  position: fixed;
+  margin-right: 53%;
+  flex-direction: column;
+  color: rgb(212, 255, 235);
+  align-items: center;
+  align-self: flex-end;
+  right: 2rem;
+  gap: 1rem;
+  margin-top: 10%;
+  /* border: 2px solid red; */
+}
+
+.menu button {
+  width: 50%;
+  background: none;
+  border: 2px solid rgb(12, 255, 154);
+  border-bottom: 2px solid rgb(164, 115, 255);
+  border-left: 2px solid rgb(164, 115, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(12, 255, 154);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  box-shadow: 1px 1px 3px rgb(0, 255, 136);
+}
+
+#clearPage {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.cards-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 5rem;
+  /* border: 5px solid white; */
+}
+
+.cards-header img {
+  width: 250px;
+  height: 190px;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 100%;
+  /* border: 2px solid rgb(0, 255, 0); */
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 0;
+  justify-content: center;
+  gap: 1.2rem;
+  /* border: 1px solid white; */
+}
+
+.hangingRick {
+  width: 120px;
+  height: 120px;
+  top: 0;
+}
+
+.scrollUpBtn {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 1em;
+  right: 3em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #2bffae;
+  box-shadow: 1px 1px 10px rgb(12, 255, 154);
+  transition: all 1s;
+}
+
+.goHome {
+  font-family: "Get Schwifty";
+  font-size: 2rem;
+  color: rgb(96, 255, 162);
+  top: 0;
+}
+
+#cards-amount {
+  width: 100px;
+  background: none;
+  border: 2px solid rgb(12, 255, 154);
+  border-radius: 0.5rem;
+  border-bottom: 2px solid rgb(164, 115, 255);
+  /* border-left: 2px solid rgb(164, 115, 255); */
+  color: rgb(12, 255, 154);
+  padding: 0.3rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+#cards-amount option {
+  font-size: 1rem;
+  color: rgb(4, 92, 114);
+  background-color: #00cf79;
+}
+
+#titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  /* border: 3px solid white; */
+}
+
+@media (max-width: 1500px) {
+  .card {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  .card img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    position: static;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+.streak {
+  top: 14.5rem;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  z-index: -2;
+  background-color: rgba(44, 32, 54, 0.274);
+  /* transform: rotateZ(160deg); */
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+}
+
+#search-field {
+  text-align: center;
+  font-size: 1rem;
+  height: 2rem;
+  border: 1px solid rgb(0, 255, 136);
+  border-radius: 0.5rem;
+  border-bottom: 2px solid rgb(164, 115, 255);
+  border-left: 2px solid rgb(164, 115, 255);
+  background-color: rgba(62, 43, 66, 0.5);
+  color: rgb(113, 255, 208);
+}
