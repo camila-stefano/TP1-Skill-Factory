@@ -6,7 +6,7 @@ const scrollUp = document.querySelector(".scrollUpBtn");
 const showBtn = document.querySelector("#showBtn");
 const clearPage = document.querySelector("#clearBtn");
 let cardsAmount = document.querySelector("#cards-amount");
-let searchCharacter = document.querySelector("#search-field");
+let searchCharInput = document.querySelector("#search-field");
 
 // Function to display multiple cards.
 const displayCards = async (cardsAmount) => {
@@ -18,6 +18,17 @@ const removeCards = () => {
   cardsContainer
     .querySelectorAll(".card")
     .forEach((card) => cardsContainer.removeChild(card));
+};
+
+const showSearchResults = async (name) => {
+  try {
+    const results = await axios.get(
+      `https://rickandmortyapi.com/api/character/?name=${name}`
+    );
+    results.data.results.forEach((char) => createCard(char.id));
+  } catch (err) {
+    alert("Name not found");
+  }
 };
 
 // Function to fetch data from the API and display a new card.
@@ -65,5 +76,17 @@ scrollUp.addEventListener(
 // Listener for the show-cards button.
 showBtn.addEventListener("click", () => {
   if (cardsContainer.querySelectorAll(".card")) removeCards();
-  displayCards(parseInt(cardsAmount.value));
+  !searchCharInput.value
+    ? displayCards(parseInt(cardsAmount.value))
+    : showSearchResults(searchCharInput.value);
+});
+
+searchCharInput.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    if (cardsContainer.querySelectorAll(".card")) removeCards();
+    !searchCharInput.value
+      ? displayCards(parseInt(cardsAmount.value))
+      : showSearchResults(searchCharInput.value);
+    searchCharInput.value = "";
+  }
 });
