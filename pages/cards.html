@@ -9,42 +9,51 @@
   </head>
   <body>
     <img src="../images/rick.jpg" id="bg-img" />
+    <div class="filter-color"></div>
+    <div class="upper-gradient"></div>
     <div class="main-container">
-      <!-- <div class="streak"></div> -->
       <div class="leftSide">
+        <a class="go-home-res" href="../index.html">HOME</a>
         <div id="titulo">
-          <h1>Rick and Morty</h1>
+          <h1>Rick <span>and</span> Morty</h1>
         </div>
         <div class="menu">
           <img class="hangingRick" src="../images/rick-hanging-png.png" />
-          <label for="cards-amount">Select amount of characters to show</label>
+          <label for="cards-amount"
+            >Number of characters<br />
+            to display:</label
+          >
           <select name="cards-amount" id="cards-amount">
             <option value="20">20</option>
             <option value="50">50</option>
             <option value="100">100</option>
             <option value="200">200</option>
           </select>
+
+          <button id="showBtn">Show characters</button>
           <div class="search">
             <label for="search-field">Search character</label>
             <input type="text" id="search-field" />
           </div>
-          <button id="showBtn">Show characters</button>
+          <button id="search-btn">Search</button>
           <button id="clearBtn">Clear page</button>
         </div>
       </div>
-
+      <div class="vertical-divider"></div>
       <div class="rightSide">
         <div class="go-home-container">
           <div class="divider"></div>
           <a class="go-home" href="../index.html">HOME</a>
         </div>
-
         <section class="cardContainer"></section>
         <button class="scrollUpBtn">Go up</button>
       </div>
+      <footer>
+        TP1 - Skill Factory by AVALITH. Alan Vilalte - Camila Stefano
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/rick-and-morty.js"></script>
   </body>
 </html>

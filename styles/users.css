@@ -46,6 +46,46 @@ body {
   z-index: -5;
 }
 
+.go-home {
+  top: 1rem;
+  left: 1rem;
+  position: fixed;
+  width: fit-content;
+  color: var(--aquamarine);
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 5;
+  text-shadow: 2px 2px 5px var(--dark-purple);
+}
+
+footer {
+  display: flex;
+  text-shadow: 1px 1px 1px var(--dark-purple);
+  justify-content: center;
+  padding: 1rem;
+  align-items: flex-end;
+  color: rgb(212, 255, 235);
+  opacity: 0.7;
+  width: 100vw;
+  height: 6rem;
+  bottom: 0;
+  position: fixed;
+  z-index: 5;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.2));
+}
+
+.upper-gradient {
+  color: rgb(212, 255, 235);
+  opacity: 0.7;
+  width: 100vw;
+  height: 7rem;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  background: linear-gradient(rgba(12, 255, 182, 0.1), rgba(0, 0, 0, 0));
+}
+
 table {
   border: 2px solid var(--medium-purple);
   font-size: 1.2rem;
@@ -57,10 +97,19 @@ tr {
   border: 1px solid var(--medium-purple);
 }
 
+th {
+  border: 1px solid var(--medium-purple);
+  padding: 0.5rem;
+}
+
 td {
   border: 1px solid var(--medium-purple);
   text-align: center;
   padding: 0.5rem;
+}
+
+td:hover {
+  background-color: rgba(164, 115, 255, 0.1);
 }
 
 tr:first-child {

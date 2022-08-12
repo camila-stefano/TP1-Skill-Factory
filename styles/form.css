@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --aquamarine: rgba(113, 255, 208, 1);
+  --medium-spring-green: rgba(12, 255, 154, 1);
+  --blue-sapphire: rgba(4, 92, 114, 1);
+  --dark-purple: rgba(62, 43, 66, 1);
+  --royal-purple: rgba(128, 76, 158, 1);
+  --medium-purple: rgba(164, 115, 255, 1);
+}
+
+body {
+  background: url(../images/mountains-bg.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  font-family: "Changa", sans-serif;
+  color: var(--aquamarine);
+  text-shadow: 2px 2px 5px var(--dark-purple);
+}
+
+.bg-img {
+  background: linear-gradient(var(--dark-purple), var(--royal-purple));
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  position: absolute;
+  opacity: 0.4;
+  z-index: -5;
+}
+
+.form-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 3rem;
+}
+
+.go-home {
+  top: 1rem;
+  left: 1rem;
+  position: fixed;
+  width: fit-content;
+  color: var(--aquamarine);
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 4;
+  text-shadow: 2px 2px 5px var(--dark-purple);
+}
+
+.preview {
+  width: 30%;
+  background: linear-gradient(rgba(67, 44, 88, 0.5), rgba(44, 83, 88, 0.5));
+  display: none;
+}
+
+.preview-show {
+  display: unset;
+}
+
+form {
+  width: 30%;
+  padding: 1.5rem;
+  background: linear-gradient(rgba(67, 44, 88, 0.5), rgba(44, 83, 88, 0.5));
+  border-radius: 1rem;
+  border: 1.5px solid rgb(12, 255, 154);
+  border-bottom: 2px solid rgb(164, 115, 255);
+  border-left: 2px solid rgb(164, 115, 255);
+  color: var(--aquamarine);
+}
+
+form input {
+  display: flex;
+  width: 100%;
+  background-color: rgba(62, 43, 66, 0.5);
+  color: var(--aquamarine);
+  font-size: 1rem;
+  padding: 0.45rem;
+  border: none;
+  border-bottom: 2px solid rgb(164, 115, 255);
+  border-radius: 0.5rem;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form label {
+  font-size: 1.1rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: rgba(53, 38, 56, 0.5);
+  color: var(--aquamarine);
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid rgb(164, 115, 255);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.btn-form {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  border: 1.5px solid var(--medium-spring-green);
+  color: var(--medium-spring-green);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px var(--blue-sapphire);
+  letter-spacing: 0.3rem;
+}
+
+.btn-form:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(12, 255, 154, 0.3));
+  transition: 2s;
+}
+
+footer {
+  display: flex;
+  text-shadow: 1px 1px 1px var(--dark-purple);
+  justify-content: center;
+  padding: 1rem;
+  align-items: flex-end;
+  color: rgb(212, 255, 235);
+  opacity: 0.7;
+  width: 100vw;
+  height: 7rem;
+  bottom: 0;
+  position: fixed;
+  z-index: 5;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.25));
+}
+
+.upper-gradient {
+  color: rgb(212, 255, 235);
+  opacity: 0.7;
+  width: 100vw;
+  height: 7rem;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  background: linear-gradient(rgba(12, 255, 182, 0.1), rgba(0, 0, 0, 0));
+}
