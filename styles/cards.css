@@ -485,4 +485,15 @@ footer {
   .cardContainer {
     padding: 0;
   }
+
+  .menu {
+    width: 100%;
+    background-color: rgba(24, 24, 24, 0.5);
+    box-shadow: 2px 2px 5px rgba(38, 41, 80, 0.5);
+  }
+
+  .filter-color {
+    background-color: rgba(38, 41, 80, 0.3);
+    mix-blend-mode: multiply;
+  }
 }

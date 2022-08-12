@@ -20,17 +20,19 @@
       </section>
 
       <section class="section-form">
-        <form method="post" action="">
+        <form method="post" action="mailto:camilavictoriastefano@gmail.com">
           <fieldset>
             <div class="input-div">
-              <label for="uname">Username:</label>
+              <label for="uname">Name:</label>
               <input
                 type="text"
                 id="uname"
                 name="uname"
-                placeholder="Username"
+                placeholder="Name"
                 required
+                autofocus
               />
+              <p class="input-info name-info"></p>
             </div>
             <div class="input-div">
               <label for="email">Email:</label>
@@ -43,13 +45,20 @@
                 maxlength="64"
                 required
               />
+              <p class="input-info email-info"></p>
             </div>
-            <textarea
-              id="msg"
-              name="message"
-              rows="10"
-              maxlength="1500"
-            ></textarea>
+            <div class="input-textarea">
+              <textarea
+                id="msg"
+                name="message"
+                rows="10"
+                minlength="10"
+                maxlength="1500"
+                required
+                placeholder="Write your message here..."
+              ></textarea>
+              <p class="input-info msg-info"></p>
+            </div>
             <button class="preview-btn btn-form">Preview your message</button>
             <input class="btn-form submit" type="submit" value="Submit" />
           </fieldset>
