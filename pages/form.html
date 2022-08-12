@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get in touch</title>
-  </head>
-  <body>
-    You can use the following form to reach out to us.
-    <form action="#"></form>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <title>Get in touch</title>
+</head>
+
+<body>
+  <div class="bg-img"></div>
+  <section>
+    <h1 class="h1-form">
+      You can use the following form to reach out to us.</h1>
+  </section>
+
+  <section class="section-form">
+    <form method="post" action="mailto:camilavictoriastefano@gmail.com">
+      <fieldset>
+        <legend>Contact us</legend>
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname" placeholder="Username Here">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email Here" size="30" minlength="3" maxlength="64" required>
+        <textarea name="message" rows="10"></textarea>
+        <input class="btn-form" type="submit" value="Submit">
+      </fieldset>
+    </form>
+  </section>
+</body>
+
 </html>
