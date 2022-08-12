@@ -70,19 +70,34 @@ body {
 }
 
 .preview {
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem 3rem;
+  gap: 4rem;
+  width: 20%;
+  right: 35%;
   background: linear-gradient(rgba(67, 44, 88, 0.5), rgba(44, 83, 88, 0.5));
-  display: none;
+  position: absolute;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 1px 1px 15px rgba(53, 38, 56, 0.5);
 }
 
 .preview-show {
   display: unset;
+  position: unset;
+  transform: translateX(10%) scale(1.2);
+  background: linear-gradient(rgba(67, 44, 88, 0.8), rgba(44, 83, 88, 0.8));
+  transition: 1s;
+  display: flex;
 }
 
 form {
   width: 30%;
   padding: 1.5rem;
-  background: linear-gradient(rgba(67, 44, 88, 0.5), rgba(44, 83, 88, 0.5));
+  background: linear-gradient(rgba(44, 83, 88, 0.5), rgba(67, 44, 88, 0.5));
   border-radius: 1rem;
   border: 1.5px solid rgb(12, 255, 154);
   border-bottom: 2px solid rgb(164, 115, 255);
