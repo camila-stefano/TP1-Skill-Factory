@@ -1,3 +1,4 @@
-Skill Factory by Avalith.
+Checkpoint #1 :heavy_check_mark:
+Preparing our first project in Skill Factory by Avalith :rocket: using HTML, CSS and JS. :sparkles:
 
-First project. //
+Made by Alan Vilalte and Camila Victoria Stéfano. :art:
