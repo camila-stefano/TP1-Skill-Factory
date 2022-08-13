@@ -21,9 +21,10 @@ body {
   background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
-  /* border: 2px solid red; */
   color: var(--aquamarine);
   font-family: "Changa", sans-serif;
+  padding: 2rem 0rem;
+  position: relative;
 }
 
 .bg-img {
@@ -39,22 +40,21 @@ body {
 header {
   width: 100%;
   height: auto;
-  /* border: 2px solid yellow; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.7rem;
-  margin-top: 10rem;
   text-shadow: 3px 3px 2px var(--dark-purple);
 }
 
 header h1 {
   font-size: 3rem;
+  line-height: 2.5rem;
 }
 
 header h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .btn-container {
@@ -112,25 +112,34 @@ footer {
   width: 100vw;
   height: 15rem;
   bottom: 0;
+  left: 0;
   position: fixed;
   z-index: 5;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(12, 255, 182, 0.12));
 }
 
 @media (max-width: 750px) {
+  body {
+    grid-template-rows: 5rem 1fr 3rem;
+    padding: 1.5rem 0.5rem;
+  }
+
   .btn-container {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   header {
     align-items: center;
+    gap: 0rem;
   }
+
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   header h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }

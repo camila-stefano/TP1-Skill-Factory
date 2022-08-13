@@ -60,8 +60,10 @@ body {
 }
 
 .go-home {
-  top: 1rem;
-  left: 1rem;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
   position: fixed;
   width: fit-content;
   color: var(--aquamarine);
@@ -70,6 +72,10 @@ body {
   cursor: pointer;
   z-index: 4;
   text-shadow: 2px 2px 5px var(--dark-purple);
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-left: 1rem;
 }
 
 .preview {
